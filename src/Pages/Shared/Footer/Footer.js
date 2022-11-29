@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
             </footer>
             <div className='text-center text-white pb-4'>
-                <p>Copyright © 2022 - All right reserved by Phone Resale House</p>
+                <p>Copyright © 2022 - All right reserved by Mobile Resale Market</p>
             </div>
         </div>
     );

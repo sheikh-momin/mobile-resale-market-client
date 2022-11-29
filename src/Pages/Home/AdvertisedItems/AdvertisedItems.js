@@ -6,7 +6,7 @@ import AdvertisedCard from './AdvertisedCard';
 
 const AdvertisedItems = () => {
     const { logOut } = useContext(AuthContext);
-    const url = 'http://localhost:5000/products/advertised';
+    const url = 'https://mobile-resale-market-server-1.vercel.app/products/advertised';
 
     const { data: products = [], isLoading, } = useQuery({
         queryKey: ['products'],

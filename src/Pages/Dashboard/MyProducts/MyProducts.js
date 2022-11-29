@@ -7,7 +7,7 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 const MyProducts = () => {
     const { user, logOut } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/products?email=${user?.email}`;
+    const url = `https://mobile-resale-market-server-1.vercel.app/products?email=${user?.email}`;
 
     const { data: products = [], isLoading, refetch } = useQuery({
         queryKey: ['products', user?.email],
@@ -28,7 +28,7 @@ const MyProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this product?');
         if (proceed) {
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://mobile-resale-market-server-1.vercel.app/products/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -46,7 +46,7 @@ const MyProducts = () => {
     };
 
     const handleAdvertise = id => {
-        fetch(`http://localhost:5000/products/advertise/${id}`, {
+        fetch(`https://mobile-resale-market-server-1.vercel.app/products/advertise/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

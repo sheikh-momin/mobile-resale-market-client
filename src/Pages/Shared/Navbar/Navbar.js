@@ -14,7 +14,7 @@ const Navbar = () => {
     }
     const navbar = <>
         <Link to='/' className='btn btn-ghost'>Home</Link>
-        <Link to='/' className='btn btn-ghost'>Categories</Link>
+        <Link to='/category' className='btn btn-ghost'>Categories</Link>
         {
             user?.uid &&
             <>
@@ -35,7 +35,7 @@ const Navbar = () => {
                         {navbar}
                     </ul>
                 </div>
-                <Link to='/'><img src={logo} alt="" /></Link>
+                <Link to='/'><img className='w-40' src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex ml-6">
                 <ul className="menu menu-horizontal p-0">

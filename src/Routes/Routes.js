@@ -20,6 +20,7 @@ import Blog from "../Pages/Blog/Blog";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import AllReportedItems from "../Pages/Dashboard/AllReportedItems/AllReportedItems";
+import ProdactDetails from "../Pages/Home/Categories/ProdactDetails";
 
 const router = createBrowserRouter([
     {
@@ -44,9 +45,19 @@ const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
+                path: '/category',
+                element: <PrivateRoutes><Category></Category></PrivateRoutes>,
+                loader: ({ params }) => fetch(`https://mobile-resale-market-server-1.vercel.app/categories`)
+            },
+            {
                 path: '/category/:id',
                 element: <PrivateRoutes><Category></Category></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({ params }) => fetch(`https://mobile-resale-market-server-1.vercel.app/categories/${params.id}`)
+            },
+            {
+                path: '/categories/:id',
+                element: <PrivateRoutes><ProdactDetails></ProdactDetails></PrivateRoutes>,
+                loader: ({ params }) => fetch(`https://mobile-resale-market-server-1.vercel.app/categories/${params.id}`)
             },
         ]
     },
@@ -86,7 +97,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <Payment></Payment>,
-                loader: ({ params }) => fetch(`http://localhost:5000/booking/${params.id}`)
+                loader: ({ params }) => fetch(`https://mobile-resale-market-server-1.vercel.app/booking/${params.id}`)
             },
         ]
     },

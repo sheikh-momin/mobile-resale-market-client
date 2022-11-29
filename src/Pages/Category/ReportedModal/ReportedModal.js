@@ -24,7 +24,7 @@ const ReportedModal = ({ item, setItem }) => {
             brand,
             img,
         }
-        fetch('http://localhost:5000/reportedItems', {
+        fetch('https://mobile-resale-market-server-1.vercel.app/reportedItems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
