@@ -1,5 +1,7 @@
 Website Name: Cesar Photography
 Live Site:   https://mobile-resale-market-982d0.web.app
+admin email: admin@admin.com
+admin password: 123456
 
 1. React-Bootstrap
 2. React-Router
