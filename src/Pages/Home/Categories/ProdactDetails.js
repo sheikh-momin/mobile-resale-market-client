@@ -6,6 +6,7 @@ import Productcard from './Productcard';
 
 const ProdactDetails = () => {
   const products = useLoaderData();
+  console.log(products)
   const navigation = useNavigation();
   const [item, setItem] = useState({});
 
